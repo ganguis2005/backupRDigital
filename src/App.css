@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+
+#root,
+.app-container {
+  width: 100%;
+  height: 100%
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /*text-align: center;*/
+
+  min-height: 10vh;
+  width: 100%;
+  height: 100%;
+  background-color: white;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app__header {
+  width: auto;
+  height: auto;
+  pointer-events: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__logo {
+  display: block;
+  width: 512px;
+  height: 288px;
+  margin: 8px;
+  background: url("./components/mullerLogo.png") no-repeat;
+  background-size: contain;
+}
+
+.app__logo--medium {
+  width: calc(512px / 1.5);
+  height: calc(288px / 1.5);
+  margin-bottom: 32px;
+}
+
+.app__logo--small {
+  width: calc(512px / 2);
+  height: calc(288px / 2);
+}
+
+.app__content {
+  text-align: center;
+}
+
+.app__actions{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.back-btn {
+  position: relative;
+  color: red;
+  border: 2px solid red;
+  border-radius: 100%;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  pointer-events: all;
+  margin: 16px;
+}
+
+.back-btn::focus,
+.back-btn::hover {
+  outline: 0;
+}
+
+.back-btn__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
